@@ -76,9 +76,7 @@ function kill_em_all(){
         read -p "Enter y to kill this image: " confirm
         if [[ "$confirm" == "y" ]]
         then
-            echo "I don't do this yet"
-            echo "docker rmi $hash"
-            echo
+            docker rmi "$hash"
         else
             echo "Not killing"
         fi
